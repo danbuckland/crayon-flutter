@@ -8,7 +8,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     Widget titleSection = new Container(
       padding: const EdgeInsets.all(32.0),
       child: new Row(
@@ -53,29 +52,28 @@ class MyApp extends StatelessWidget {
         children: [
           new Icon(icon, color: color),
           new Container(
-            margin: const EdgeInsets.only(top: 8.0),
-            child: new Text(
-              label,
-              style: new TextStyle(
-                fontSize: 12.0,
-                fontWeight: FontWeight.w400,
-                color: color,
-              ),
-            )
-          )
+              margin: const EdgeInsets.only(top: 8.0),
+              child: new Text(
+                label,
+                style: new TextStyle(
+                  fontSize: 12.0,
+                  fontWeight: FontWeight.w400,
+                  color: color,
+                ),
+              ))
         ],
       );
     }
+
     Widget buttonSection = new Container(
-      child: new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          buildButtonColumn(Icons.call, 'CALL'),
-          buildButtonColumn(Icons.near_me, 'ROUTE'),
-          buildButtonColumn(Icons.share, 'SHARE'),
-        ],
-      )
-    );
+        child: new Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        buildButtonColumn(Icons.call, 'CALL'),
+        buildButtonColumn(Icons.near_me, 'ROUTE'),
+        buildButtonColumn(Icons.share, 'SHARE'),
+      ],
+    ));
     Widget textSection = new Container(
       padding: const EdgeInsets.all(32.0),
       child: new Text(
